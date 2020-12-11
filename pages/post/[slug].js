@@ -32,21 +32,20 @@ export async function getStaticProps({params}) {
 }
 
 export default function Blog({blog}) {
-  console.log(blog)
     return (
         <Layout title="Blog page">
-          <div className="TETS">
+          <div>
             <h1>
-              {blog.fields.title}
+              {blog?.fields.title}
             </h1>
 
-            <span>{blog.fields.date}</span>
+            <span>{blog?.fields.date}</span>
 
             <p className="description">
-              {blog.fields.description}
+              {blog?.fields.description}
             </p>
 
-            <img src={blog.fields.images.fields.file.url} alt={blog.fields.images.fields.title}/>
+            <img src={blog?.fields.images.fields.file.url} alt={blog?.fields.images.fields.title}/>
           </div>
         </Layout>
     )
