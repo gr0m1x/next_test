@@ -19,24 +19,6 @@ export default function Layout( {children, title = 'Next App'}) {
             </nav>
 
             <main>{children}</main>
-
-          <style jsx global>
-            {`
-             nav  {
-              display: flex;
-            }
-
-            nav a {
-              margin-right: 15px;
-            }
-            
-            nav a:hover {
-              color: red;
-            }
-            
-            `}
-
-          </style>
         </>
     )
 }

@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  padding: 15px 0;
+}
+
+nav a {
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: red;
+}

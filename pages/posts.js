@@ -2,13 +2,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 // import Preloader from "../components/Preloader";
-
-
-const client = require('contentful').createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-});
-
+import client from "./api/api";
 
 // export async function getStaticProps() {
 //

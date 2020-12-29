@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout";
+import Router from "next/router";
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -34,10 +35,13 @@ export async function getStaticProps({params}) {
 export default function Blog({blog}) {
     return (
         <Layout title="Blog page">
-          <div>
+          <div className="post-body">
+            <h3 className="back-btn" onClick={ () => Router.push('/posts')}>Back</h3>
+
             <h1>
               {blog?.fields.title}
             </h1>
+
 
             <span>{blog?.fields.date}</span>
 
