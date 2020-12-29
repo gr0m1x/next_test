@@ -10,11 +10,24 @@ const client = require('contentful').createClient({
 });
 
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//
+//   let data = await client.getEntries({
+//     content_type: "nextTest"
+//   });
+//   return {
+//     props: {
+//       posts: data.items
+//     }
+//   }
+// }
+
+export async function getServerSideProps(context) {
 
   let data = await client.getEntries({
     content_type: "nextTest"
   });
+
   return {
     props: {
       posts: data.items
